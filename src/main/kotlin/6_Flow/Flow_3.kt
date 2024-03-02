@@ -11,7 +11,7 @@ private fun stringFlow(): Flow<String> = flow {
     }
 }
 
-fun main(args: Array<String>) = runBlocking{
+fun main() = runBlocking{
     val time = Date().time
     var result = ""
 
@@ -22,5 +22,5 @@ fun main(args: Array<String>) = runBlocking{
         result += item
     }
 
-    print("Result: $result ${time - Date().time   }")
+    print("Result: $result ${ Date().time - time }")
 }

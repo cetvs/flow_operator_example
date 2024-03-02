@@ -13,10 +13,10 @@ fun numberFlow(): Flow<Int> = flow {
 }
 
 fun main(args: Array<String>) = runBlocking{
-    withTimeoutOrNull(250) {
+    withTimeoutOrNull(450) {
         numberFlow().collect {
             delay(50)
-            print("$it")
+            print("$it ")
         }
     }
 

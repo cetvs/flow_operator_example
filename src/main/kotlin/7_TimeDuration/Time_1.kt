@@ -1,13 +1,15 @@
-package Scope
+package `1_Scope`
 
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import java.lang.Thread.sleep
 import java.util.*
+import kotlin.coroutines.CoroutineContext
 
-fun main(args: Array<String>) = runBlocking{
+fun main(args: Array<String>) = runBlocking(){
     val time = Date().time
 
     val JobA = launch {
@@ -30,5 +32,5 @@ fun main(args: Array<String>) = runBlocking{
 
     joinAll(JobA, JobB, JobC)
 
-    print("Result: ${time - Date().time   }")
+    print("Result: ${ Date().time - time }")
 }

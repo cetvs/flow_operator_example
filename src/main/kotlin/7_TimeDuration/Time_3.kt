@@ -1,9 +1,8 @@
-package Scope
+package `1_Scope`
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import java.lang.Thread.sleep
 import java.util.*
 
 fun main(args: Array<String>) {

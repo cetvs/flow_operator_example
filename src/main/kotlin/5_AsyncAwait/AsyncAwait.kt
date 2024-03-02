@@ -14,7 +14,6 @@ suspend fun performTask(id: Int): Int {
 fun main() = runBlocking {
     val start = Date().time
 
-
     val deferred1 = async { performTask(1) }
     val deferred2 = async { performTask(2) }
 
